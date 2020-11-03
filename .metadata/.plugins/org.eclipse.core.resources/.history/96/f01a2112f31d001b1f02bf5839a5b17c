@@ -77,8 +77,6 @@ public abstract class Patient {
 	public void setPatientId(int patientId) {
 		if (patientId >= 1000 && 100000 >= patientId) {
 			this.patientId = patientId;
-		} else {
-			this.patientId = 1000;
 		}
 	}
 	/*
@@ -87,8 +85,6 @@ public abstract class Patient {
 	public void setFirstName(String firstName) {
 		if (!firstName.isEmpty() && !firstName.equalsIgnoreCase(null)) {
 			this.firstName = firstName;
-		} else {
-			this.firstName = "Unknown";
 		}
 	}
 	/*
@@ -97,9 +93,7 @@ public abstract class Patient {
 	public void setLastName(String lastName) {
 		if (!lastName.isEmpty() && !lastName.equalsIgnoreCase(null)) {
 			this.lastName = lastName;
-		} else {
-			this.lastName = "Unknown";
-		}
+		} 
 	}
 	/*
 	 * @param email
@@ -107,9 +101,7 @@ public abstract class Patient {
 	public void setEmail(String email) {
 		if (!email.isEmpty() && !email.equalsIgnoreCase(null)) {
 			this.email = email;
-		} else {
-			this.email = "Unknown";
-		}
+		} 
 	}
 	/*
 	 * @param startDate
@@ -117,8 +109,6 @@ public abstract class Patient {
 	public void setStartDate(LocalDate startDate) {
 		if (Objects.nonNull(startDate)) {
 			this.startDate = startDate;
-		} else {
-			this.startDate = LocalDate.now();
 		}
 	}
 	/*
@@ -127,9 +117,7 @@ public abstract class Patient {
 	public void setPhoneNumber(String phoneNumber) {
 		if (!phoneNumber.isEmpty() && !phoneNumber.equalsIgnoreCase(null)) {
 			this.phoneNumber = phoneNumber;
-		} else {
-			this.phoneNumber = "Unknown";
-		}
+		} 
 	}
 	/*
 	 * @param gender
@@ -137,8 +125,6 @@ public abstract class Patient {
 	public void setGender(String gender) {
 		if (!gender.isEmpty() && !gender.equalsIgnoreCase(null)) {
 			this.gender = gender;
-		} else {
-			this.gender = "Unknown";
 		} 
 	}
 	
