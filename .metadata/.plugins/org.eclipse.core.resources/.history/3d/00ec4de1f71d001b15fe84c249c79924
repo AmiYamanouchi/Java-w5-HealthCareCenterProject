@@ -83,17 +83,6 @@ public class Doctor {
 		}
 	}
 	
-	@Override
-	public String toString() {
-		return  "\nDoctor ID: " + doctorId + 
-				"\nFirst Name: " + firstName + 
-				"\nLast Name: " + lastName +  
-				"\nEmail: " + email + 
-				"\nPhone Number: " + phoneNumber +
-				"\nSpecialty: " + specialty + 
-				"\nList of Appointments: " + ArrayList<Appointment>Appointment;
-	}
-	
 	
 	
 	
