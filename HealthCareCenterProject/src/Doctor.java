@@ -20,7 +20,12 @@ public class Doctor {
 		setPhoneNumber(phoneNumber);
 		setEmail(email);
 		setSpecialty(specialty);
+		this.Appointment = new ArrayList<>();
 		
+	}
+	
+	public void addAppontment(Appointment appointment) {
+		this.Appointment.add(appointment);
 	}
 	
 	
@@ -43,6 +48,9 @@ public class Doctor {
 	public String getSpecialty() {
 		return specialty;
 	}
+	public ArrayList<Appointment> getAppointments() {
+		return Appointment;
+	}
 	
 	//setter
 	public void setDoctorId(int doctorId) {
@@ -53,10 +61,11 @@ public class Doctor {
 		}
 	}
 	public void setFirstName(String firstName) {
-		if(!firstName.isEmpty() && firstName.equalsIgnoreCase(null)) {
+		if(!firstName.isEmpty() && !firstName.equalsIgnoreCase(null)) {
 			this.firstName = firstName;
+		} else {
+			this.firstName = "unknown";
 		}
-		this.firstName = "unknown";
 	}
 	public void setLastName(String lastName) {
 		if (!lastName.isEmpty() && !lastName.equalsIgnoreCase(null)) {
@@ -76,11 +85,16 @@ public class Doctor {
 		}
 	}
 	public void setSpecialty(String specialty) {
-		if (!firstName.isEmpty() && !firstName.equalsIgnoreCase(null)) {
+		if (!specialty.isEmpty() && !specialty.equalsIgnoreCase(null)) {
 			this.specialty = specialty;
 		} else {
 			this.specialty = "Unknown";
 		}
+	}
+	
+	//appointments list
+	public ArrayList<Appointment> getAppointment(){
+		return Appointment;
 	}
 	
 	@Override
@@ -90,10 +104,9 @@ public class Doctor {
 				"\nLast Name: " + lastName +  
 				"\nEmail: " + email + 
 				"\nPhone Number: " + phoneNumber +
-				"\nSpecialty: " + specialty + 
-				"\nList of Appointments: " + ArrayList<Appointment>Appointment;
+				"\nSpecialty: " + specialty +
+				"\nList of Appointments: " + Appointment;
 	}
-	
 	
 	
 	

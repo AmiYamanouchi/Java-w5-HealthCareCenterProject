@@ -1,0 +1,43 @@
+import java.time.LocalDate;
+import java.util.Objects;
+
+
+public class Appointment {
+	private LocalDate appointmentDate;
+	private Patient patient;
+	//CONSTRUCTOR
+	public Appointment(Patient patient, LocalDate appointmentDate);
+	setAppointmentDate(appointmentDate);
+	setPatient(patient);
+	}
+	//GETTER
+	/*
+	 * @return appointmentDate
+	 */
+	public LocalDate getAppointmentDate() {
+		return appointmentDate;
+	}
+	// SETTER
+	/*
+	 * @param appointmentDate
+	 */
+	public void setAppointmentDate(LocalDate appointmentDate) {
+		if (Objects.nonNull(appointmentDate)) {
+			this.appointmentDate = appointmentDate;
+		} else {
+			this.appointmentDate = LocalDate.now();
+		}		
+	}
+	@Override
+	public String toString() {
+		return "\n*** Patient Appointment Date ***" + 
+				super.toString() + 
+				"\nYour appoint date is " + appointmentDate  + ".";
+	}
+}
+
+
+
+
+
+
